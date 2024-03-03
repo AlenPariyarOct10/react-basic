@@ -36,7 +36,6 @@ const Array = () => {
   document.title = "Array";
   console.log(arrObj?.[0]);
 
-
   return (
     <div>
       <div>
