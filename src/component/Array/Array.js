@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Array = () => {
   const arr = ["Alen Pariyar", "Lamjung"];
@@ -15,22 +16,26 @@ const Array = () => {
   const arrMethod = [
     {
         name: "map",
-        key: 1
+        key: 1,
+        path: "map"
     },
     {
         name: "filter",
-        key: 2
+        key: 2,
+        path: "filter"
 
     },
     {
         name: "reduce",
-        key: 3
+        key: 3,
+        path: "reduce"
+
 
     },
     {
         name: "forEach",
-        key: 4
-
+        key: 4,
+        path: "forEach"
     },
   ]
   document.title = "Array";
@@ -48,10 +53,10 @@ const Array = () => {
         {arrMethod?.map((item)=>(
             <tr key={item?.key}>
                 <td>
-                    {item?.key}
+                  {item?.key}
                 </td>
                 <td>
-                    {item?.name}
+                   <NavLink to={item?.path}> {item?.name}</NavLink>
                 </td>
             </tr>
         ))}

@@ -26,7 +26,9 @@ export const Layout = ()=>{
                 Links.map((item)=>(
                     <NavLink to={item.to}>{item.name}</NavLink>
                 ))
+                
             }
+           
         </div>
         <Outlet></Outlet>
         </>
