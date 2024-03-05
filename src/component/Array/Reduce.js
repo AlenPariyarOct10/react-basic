@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import GoBack from "../GoBack";
 
 const Reduce = () => {
   const arr = ["Alen Pariyar", "Lamjung"];
@@ -20,6 +21,7 @@ const Reduce = () => {
   return (
     <div>
       This is Reduce
+      <GoBack></GoBack>
     </div>
   );
 };

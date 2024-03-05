@@ -57,5 +57,8 @@ pre{
   background-color: black;
 }
 
-
+.arrayMethods:hover{
+  background-color: rgb(145, 197, 255);
+  cursor: pointer;
+}
 

@@ -1,5 +1,7 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useNavigate } from "react-router-dom";
+
 export const Layout = ()=>{
+    
     const Links = [
         {
             name : "Home",
@@ -17,17 +19,18 @@ export const Layout = ()=>{
             name : "Array",
             to : "/array"
         },
-    ]
+    ];
+
 
     return (
         <>
         <div className="mainNav">
             {
                 Links.map((item)=>(
-                    <NavLink to={item.to}>{item.name}</NavLink>
-                ))
-                
+                    <NavLink key={item.name} to={item.to}>{item.name}</NavLink>
+                )) 
             }
+
            
         </div>
         <Outlet></Outlet>

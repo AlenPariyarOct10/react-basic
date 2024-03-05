@@ -1,19 +1,17 @@
 import React from "react";
-import {useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
+const GoBack = ()=>{
+    const navigate = useNavigate();
+    const redirect = ()=>{
+        navigate(-1);
+      }
 
-const GoBack = () => {
-  const navigate = useNavigate();
+      return (
+        <button onClick={()=>redirect()}>Go Back</button>
+      );
 
-  const redirect = (path)=>{
-    navigate(path);
-  }
-
-  return (
-    <button onClick={redirect("/array")}>Go Back</button>
-    
-  );
-
-};
+      
+}
 
 export default GoBack;

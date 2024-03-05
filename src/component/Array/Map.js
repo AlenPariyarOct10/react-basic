@@ -2,6 +2,7 @@ import React from "react";
 import Highlighter from "../Highlighter";
 import GoBack from "../GoBack";
 
+
 const Map = () => {
   const arr = ["Alen Pariyar", "Lamjung"];
   const x = [10,20,30,40,50];

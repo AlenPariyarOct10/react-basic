@@ -56,8 +56,9 @@ const Array = () => {
       <div>{arr[1]}</div>
       <div>{arr.toString()}</div>
       <table border='1'>
+        <tbody>
         {arrMethod?.map((item)=>(
-            <tr key={item?.key}>
+            <tr className="arrayMethods" key={item?.key}>
                 <td>
                   {item?.key}
                 </td>
@@ -66,6 +67,7 @@ const Array = () => {
                 </td>
             </tr>
         ))}
+        </tbody>
       </table>
     </div>
   );
