@@ -1,7 +1,9 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 const Array = () => {
+  const navigate = useNavigate();
   const arr = ["Alen Pariyar", "Lamjung"];
   const arrObj = [
     {
@@ -39,7 +41,11 @@ const Array = () => {
     },
   ]
   document.title = "Array";
-  console.log(arrObj?.[0]);
+
+  const redirect = (path)=>{
+    navigate(path);
+  }
+  
 
   return (
     <div>
@@ -56,7 +62,7 @@ const Array = () => {
                   {item?.key}
                 </td>
                 <td>
-                   <NavLink to={item?.path}> {item?.name}</NavLink>
+                   <span onClick={()=>redirect(item.path)} >{item.name}</span>
                 </td>
             </tr>
         ))}

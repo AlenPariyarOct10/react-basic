@@ -1,5 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+
+import Highlighter from "../Highlighter";
 
 const Filter = () => {
   const arr = ["Alen Pariyar", "Lamjung"];
@@ -19,7 +20,8 @@ const Filter = () => {
 
   return (
     <div>
-      This is Filter
+      Filter
+      <Highlighter code=""></Highlighter>
     </div>
   );
 };

@@ -1,25 +1,27 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import Highlighter from "../Highlighter";
+import GoBack from "../GoBack";
 
 const Map = () => {
   const arr = ["Alen Pariyar", "Lamjung"];
-  const arrObj = [
-    {
-        name: "Alen Pariyar",
-        address: "Lamjung"
-    },
-    {
-        name: "Ram",
-        address: "Kathmandu"
-    },
-  ];
+  const x = [10,20,30,40,50];
 
   document.title = "Array - Map";
-  console.log(arrObj?.[0]);
+  console.log(x?.[0]);
 
   return (
     <div>
-      This is map
+      Using <b>map</b>
+      <Highlighter className="code" code="
+      let x = [10,20,30,40,50];"></Highlighter>
+      <Highlighter className="code" code="
+      x.map((x)=>(console.log(x)))"></Highlighter>
+      {
+        x.map((item)=>(
+          <div key={item}>{item}</div>
+        ))
+      }
+      <GoBack></GoBack>
     </div>
   );
 };
