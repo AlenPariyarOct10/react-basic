@@ -1,26 +1,26 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import GoBack from "../GoBack";
+import Highlighter from "../Highlighter";
 
 const Reduce = () => {
-  const arr = ["Alen Pariyar", "Lamjung"];
-  const arrObj = [
-    {
-        name: "Alen Pariyar",
-        address: "Lamjung"
-    },
-    {
-        name: "Ram",
-        address: "Kathmandu"
-    },
-  ];
+  document.title = "Array - Reduce";
+  const arr = [18,22,20,100,200,12];
 
-  document.title = "Array - Map";
-  console.log(arrObj?.[0]);
+  const sum = "console.log(sum);->"+arr.reduce((accum, current)=>accum+current,0);
+  console.log(sum);
 
   return (
     <div>
       This is Reduce
+
+      <Highlighter code="
+        const arr = [18,22,20,100,200,12];
+      "></Highlighter>
+      <Highlighter code="
+         const sum = arr.reduce((accum, current)=>accum+current,0);
+      "></Highlighter>
+      <Highlighter code={sum}></Highlighter>
+      <br />
       <GoBack></GoBack>
     </div>
   );

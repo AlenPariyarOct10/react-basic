@@ -40,15 +40,27 @@ const Filter = () => {
   console.log(usr);
   document.title = "Array - Filter";
 
+  const handleDelete = (id)=>{
+    const deleteData = isData?.filter((item)=>item.id != id);
+    setIsData(deleteData);
+  }
+
+ 
+
 
   return (
     <div>
       Filter
       <Highlighter code="const marks = [30,100,400,35,60,70];"></Highlighter>
       {
-        usr3.map((item)=>(
+        isData.map((item)=>(
+          <div>
           <div key={item.id}>
             {item.name}
+          </div>
+          <button onClick={()=>handleDelete(item.id)}>
+            Delete
+          </button>
           </div>
         ))
       }
