@@ -9,6 +9,10 @@ import Map from "../component/Array/Map";
 import Filter from "../component/Array/Filter";
 import Reduce from "../component/Array/Reduce";
 import ForEach from "../component/Array/ForEach";
+import Hooks from "../component/Hooks/Hooks";
+import UseCallback from "../component/Hooks/UseCallback";
+import UseState from "../component/Hooks/UseState";
+import UseEffect from "../component/Hooks/UseEffect";
 
 export const MainRouter = createBrowserRouter(
     createRoutesFromElements(
@@ -21,6 +25,10 @@ export const MainRouter = createBrowserRouter(
             <Route path="/array/filter" element={<Filter></Filter>}></Route>
             <Route path="/array/reduce" element={<Reduce></Reduce>}></Route>
             <Route path="/array/foreach" element={<ForEach></ForEach>}></Route>
+            <Route path="/hooks/UseCallback" element={<UseCallback></UseCallback>}></Route>
+            <Route path="/hooks/UseEffect" element={<UseEffect></UseEffect>}></Route>
+            <Route path="/hooks/UseState" element={<UseState></UseState>}></Route>
+            <Route path="/hooks" element={<Hooks></Hooks>}></Route>
             <Route path="*" element={<Page404></Page404>}></Route>
         </Route>
     )

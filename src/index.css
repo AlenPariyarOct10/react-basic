@@ -62,3 +62,27 @@ pre{
   cursor: pointer;
 }
 
+
+.main-body{
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+
+.backBtn{
+  border: none;
+  padding: 10px;
+  font-size: medium;
+  background-color: rgb(145, 197, 255);
+  cursor: pointer;
+  border-radius: 10px;
+}
+.backBtn:hover{
+
+  background-color: rgb(120, 161, 209);
+
+}

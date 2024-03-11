@@ -19,6 +19,10 @@ export const Layout = ()=>{
             name : "Array",
             to : "/array"
         },
+        {
+            name : "Hooks",
+            to : "/hooks"
+        },
     ];
 
 

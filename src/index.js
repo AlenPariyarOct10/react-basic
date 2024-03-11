@@ -6,7 +6,7 @@ import { RouterProvider } from "react-router-dom";
 import { MainRouter } from "./router/MainRouter";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-const title = 
+
 
 root.render(
   <React.StrictMode>

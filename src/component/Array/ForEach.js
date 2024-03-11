@@ -1,12 +1,28 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import GoBack from "../GoBack";
 
 const ForEach = () => {
   document.title = "Array - forEach";
   const arr = [15, 16, 18, 22, 20, 25];
-
   let newArr = [];
+
+  let complexData = [
+    {
+      value: 'val1',
+      id: 12
+    },{
+      value: "hello",
+      id: 20
+    }
+  ]
+
+let convertedData = [];
+
+complexData.forEach((item)=>{
+  convertedData[item.id] = item.value;
+})
+
+console.log("converted : ",convertedData);
 
   arr.forEach((item) => {
     const afterAdd = item + 5;
