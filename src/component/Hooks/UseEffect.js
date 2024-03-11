@@ -3,9 +3,18 @@ import GoBack from "../GoBack";
 
 const UseEffect = () => {
   const [isValue, setIsValue] = React.useState(0);
+  const [isUp, setNextUp] = React.useState(false);
+
+  const handleUpCounter=()=>{
+    setNextUp(!isUp);
+  }
+
   React.useEffect(()=>{
+    setIsValue((isValue)+1)
     console.log(isValue);
-  },[isValue])
+  },[isUp])
+
+
 
   
     document.title = "Hooks - useEffect";  
@@ -13,7 +22,7 @@ const UseEffect = () => {
       <div className="main-body">
         useEffect
         <p>Clicked {isValue} times.</p>
-        <button onClick={()=>setIsValue((isValue)+1)}>➕</button>
+        <button onClick={handleUpCounter}>➕</button>
         <button onClick={()=>setIsValue(((isValue)>0)?isValue-1:0)}>➖</button>
         <button onClick={()=>setIsValue(((0)))}>🔁</button>
         <GoBack></GoBack>
