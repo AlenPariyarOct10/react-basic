@@ -12,6 +12,7 @@ const UseEffect = () => {
   React.useEffect(()=>{
     setIsValue((isValue)+1)
     console.log(isValue);
+ // eslint-disable-next-line react-hooks/exhaustive-deps
   },[isUp])
 
 
