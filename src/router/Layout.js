@@ -23,6 +23,10 @@ export const Layout = ()=>{
             name : "Hooks",
             to : "/hooks"
         },
+        {
+            name : "HOC",
+            to : "/Hoc"
+        },
     ];
 
 
