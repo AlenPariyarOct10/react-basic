@@ -28,9 +28,14 @@ code {
   text-decoration: none;
   display: flex;
   justify-content: space-around;
-
+  font-size: small;
   margin: 0;
+  
   background-color: rgb(127, 170, 255);
+}
+
+.mainNav a{
+  font-size: 15pt;
 }
 
 

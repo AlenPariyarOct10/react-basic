@@ -48,7 +48,7 @@ const Array = () => {
   
 
   return (
-    <div>
+    <div className="main-body">
       <div>
         <b> Array </b>
       </div>

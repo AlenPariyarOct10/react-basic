@@ -56,7 +56,7 @@ console.log("cheap",mostCheap);
   console.log(sum);
 
   return (
-    <div>
+    <div className="main-body">
       This is Reduce
 
       <Highlighter code="

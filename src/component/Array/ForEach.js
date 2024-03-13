@@ -32,7 +32,7 @@ console.log("converted : ",convertedData);
   console.log("arr : ", newArr);
 
   return (
-    <div>
+    <div className="main-body">
       This is <b>ForEach</b>
       <p>Iterates all the elements of the given array.</p>
       <iframe title="code"

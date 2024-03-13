@@ -55,7 +55,7 @@ const Filter = () => {
 
 
   return (
-    <div>
+    <div className="main-body">
       Filter
       <Highlighter code="const marks = [30,100,400,35,60,70];"></Highlighter>
       {

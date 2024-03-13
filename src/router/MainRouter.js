@@ -5,9 +5,9 @@ import Variable from "../component/variables/Variable";
 import Object from "../component/variables/Object";
 import Array from "../component/Array/Array";
 import Page404 from "../component/Page404";
-import Hoc from "../component/Hoc/Hoc";
-import Counter from "../component/Hoc/Counter";
-import WithCounter from "../component/Hoc/WithCounter";
+import Hoc from "../component/hoc/Hoc";
+import Counter from "../component/hoc/Counter";
+import WithCounter from "../component/hoc/WithCounter";
 import Map from "../component/Array/Map";
 import Filter from "../component/Array/Filter";
 import Reduce from "../component/Array/Reduce";
@@ -16,6 +16,8 @@ import Hooks from "../component/Hooks/Hooks";
 import UseCallback from "../component/Hooks/UseCallback";
 import UseState from "../component/Hooks/UseState";
 import UseEffect from "../component/Hooks/UseEffect";
+import { AppContextProvider } from "../component/ContextAPI/ContextAPI";
+
 
 export const MainRouter = createBrowserRouter(
     createRoutesFromElements(
@@ -32,10 +34,11 @@ export const MainRouter = createBrowserRouter(
             <Route path="/hooks/UseEffect" element={<UseEffect></UseEffect>}></Route>
             <Route path="/hooks/UseState" element={<UseState></UseState>}></Route>
             <Route path="/hooks" element={<Hooks></Hooks>}></Route>
-            <Route path="/Hoc" element={<Hoc></Hoc>}></Route>
-            <Route path="/Hoc/counter" element={<Counter></Counter>}></Route>
-            <Route path="/Hoc/with-counter" element={<WithCounter></WithCounter>}></Route>
-            
+            <Route path="/hoc" element={<Hoc></Hoc>}></Route>
+            <Route path="/hoc/counter" element={<Counter></Counter>}></Route>
+            <Route path="/hoc/with-counter" element={<WithCounter></WithCounter>}></Route>
+            <Route path="/context-api" element={<AppContextProvider></AppContextProvider>}></Route>
+           
             <Route path="*" element={<Page404></Page404>}></Route>
         </Route>
     )

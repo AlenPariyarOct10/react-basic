@@ -25,7 +25,11 @@ export const Layout = ()=>{
         },
         {
             name : "HOC",
-            to : "/Hoc"
+            to : "/hoc"
+        },
+        {
+            name : "context-api",
+            to : "/context-api"
         },
     ];
 

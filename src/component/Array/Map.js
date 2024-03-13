@@ -11,7 +11,7 @@ const Map = () => {
   console.log(x?.[0]);
 
   return (
-    <div>
+    <div className="main-body">
       Using <b>map</b>
       <Highlighter className="code" code="
       let x = [10,20,30,40,50];"></Highlighter>

@@ -10,7 +10,7 @@ const Object = () => {
   
   document.title = "Object";
   return (
-    <div>
+    <div className="main-body">
       <div>
         <b> Object </b>
       </div>
