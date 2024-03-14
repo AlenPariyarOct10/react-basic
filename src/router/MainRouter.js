@@ -17,6 +17,8 @@ import UseCallback from "../component/Hooks/UseCallback";
 import UseState from "../component/Hooks/UseState";
 import UseEffect from "../component/Hooks/UseEffect";
 import { AppContextProvider } from "../component/ContextAPI/ContextAPI";
+import Parent from "../component/ContextAPI/Parent";
+
 
 
 export const MainRouter = createBrowserRouter(
@@ -38,6 +40,9 @@ export const MainRouter = createBrowserRouter(
             <Route path="/hoc/counter" element={<Counter></Counter>}></Route>
             <Route path="/hoc/with-counter" element={<WithCounter></WithCounter>}></Route>
             <Route path="/context-api" element={<AppContextProvider></AppContextProvider>}></Route>
+            <Route path="/context-api/parent" element={<Parent></Parent>}></Route>
+            <Route path="/context-api/parent" element={<Parent></Parent>}></Route>
+
            
             <Route path="*" element={<Page404></Page404>}></Route>
         </Route>

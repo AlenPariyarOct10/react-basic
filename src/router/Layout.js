@@ -30,7 +30,7 @@ export const Layout = ()=>{
         },
         {
             name : "context-api",
-            to : "/context-api"
+            to : "/context-api/parent"
         },
     ];
 
