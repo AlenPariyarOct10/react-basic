@@ -1,4 +1,5 @@
 import React from "react";
+import { useAppContext } from "../ContextAPI/ContextAPI";
 
 const Object = () => {
   const obj = {
@@ -7,6 +8,9 @@ const Object = () => {
     college: "Ratna Rajyalaxmi Campus",
     phone: 9816699413,
   };
+
+  const {appState} = useAppContext();
+
   
   document.title = "Object";
   return (
@@ -23,6 +27,12 @@ const Object = () => {
         {obj.name = "Alen"}
         <br />
         {JSON.stringify(obj)}
+      </div>
+      <hr />
+      <div>
+        <hr />
+        <p>Data from contextAPI </p>
+        {appState.data[0].name}
       </div>
     </div>
   );

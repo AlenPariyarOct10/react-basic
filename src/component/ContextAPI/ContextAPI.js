@@ -2,21 +2,26 @@ import React from "react";
 
 const AppContext = React.createContext();
 export const useAppContext = () => React.useContext(AppContext);
-export const AppContextProvider = ({children}) => {
-    const [appState, setAppState] = React.useState({
-        data: [],
-    });
+export const AppContextProvider = ({ children }) => {
+  const [appState, setAppState] = React.useState({
+    data: [
+      {
+        name: "Alen",
+        roll: 4,
+      },
+    ],
+  });
 
-    const updateState = (newState) =>{
-        setAppState((prevState)=>({
-            ...prevState,
-            ...newState,
-        }));
-    };
+  const updateState = (newState) => {
+    setAppState((prevState) => ({
+      ...prevState,
+      ...newState,
+    }));
+  };
 
-    return (
-        <AppContext.Provider value={{appState, updateState}}>
-            {children}
-        </AppContext.Provider>
-    );
+  return (
+    <AppContext.Provider value={{ appState, updateState }}>
+      {children}
+    </AppContext.Provider>
+  );
 };

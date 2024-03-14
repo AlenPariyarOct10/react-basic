@@ -1,7 +1,8 @@
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
+import { useAppContext } from "../component/ContextAPI/ContextAPI";
 
 export const Layout = ()=>{
-    
+
     const Links = [
         {
             name : "Home",
@@ -43,7 +44,6 @@ export const Layout = ()=>{
                 )) 
             }
 
-           
         </div>
         <Outlet></Outlet>
         </>

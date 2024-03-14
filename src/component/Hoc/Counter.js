@@ -9,7 +9,6 @@ const Counter = ({count, setCount}) => {
       <div className="main-body">
         {count}
         <button onClick={setCount}>Up Count</button>
-        <GoBack></GoBack>
       </div>
     );
 };
