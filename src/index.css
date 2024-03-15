@@ -30,7 +30,7 @@ code {
   justify-content: space-around;
   font-size: small;
   margin: 0;
-  
+  align-items: center;
   background-color: rgb(127, 170, 255);
 }
 

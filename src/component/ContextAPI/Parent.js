@@ -1,13 +1,18 @@
 import React, { useCallback } from "react";
 import SubParent from "./SubParent";
+import { useAppContext } from "./ContextAPI";
 
 const Parent = () => {
     document.title = "Parent - ContextAPI";
 
-    const data = {
-        name:"Parent",
-        id:1
-    }
+    const {appState, updateState} = useAppContext(); 
+    console.log("appState",appState);
+    const data = ["Samsung","ASUS","Apple","Oppo","Redmi","Vivo","Nokia","HP","Dell","Lenovo"];
+
+    React.useEffect(()=>{
+        updateState({...appState, data:data});
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[]);
 
     return (
       <div className="main-body">

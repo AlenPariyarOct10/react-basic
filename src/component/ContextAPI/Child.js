@@ -8,7 +8,11 @@ const Child = ({data}) => {
       <div className="main-body">
         <div>
           <b> Child  </b>
-          <p>Name : {data?.name}</p>
+          {
+            data?.map((item)=>(
+                <li>{item}</li>
+            ))
+          }
           <SubChild data={data}/>
         </div>
       </div>
